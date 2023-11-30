@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cute Timer</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    #timer {
+      font-size: 2em;
+      margin-right: 10px;
+    }
+
+    #startButton {
+      font-size: 1em;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="timer">00:00</div>
+<button id="startButton" onclick="startTimer()">Start Timer</button>
+
+<script>
+  let timer;
+  let minutes = 5;
+  let seconds = 0;
+
+  function startTimer() {
+    clearInterval(timer);
+
+    timer = setInterval(function () {
+      updateTimerDisplay();
+      if (minutes === 0 && seconds === 0) {
+        clearInterval(timer);
+        alert("Timer expired!");
+      } else {
+        updateTimer();
+      }
+    }, 1000);
+  }
+
+  function updateTimer() {
+    if (seconds === 0) {
+      if (minutes > 0) {
+        minutes--;
+        seconds = 59;
+      }
+    } else {
+      seconds--;
+    }
+  }
+
+  function updateTimerDisplay() {
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+</script>
+
+</body>
+</html>
