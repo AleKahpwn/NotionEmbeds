@@ -5,24 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>No Timer</title>
+
+</head>
+<body>
 <lottie-player
   id="firstLottie"
   src="https://raw.githubusercontent.com/AleKahpwn/NotionEmbeds/main/Comp 1.json"
   style="width:300px; height: 300px;"
 >
-</lottie-player>
-</head>
-<body>
-
-LottieInteractivity.create({
-  mode: 'cursor',
-  player: '#firstLottie',
+  LottieInteractivity.create({
+  player: "#firstLottie",
+  mode: "cursor",
   actions: [
     {
-      type: 'click',
-    },
-  ],
+      type: "click",
+      forceFlag: false
+    }
+  ]
 });
+</lottie-player>
+
 
 </body>
 </html>
