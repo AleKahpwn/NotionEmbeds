@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Timer</title>
+
+</head>
+<body>
+
+<lottie-player src="https://raw.githubusercontent.com/AleKahpwn/NotionEmbeds/main/bigger_ka1.json" 
+  background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop hover></lottie-player>
+
+</body>
+</html>
