@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Timer</title>
+<lottie-player
+  id="firstLottie"
+  src="https://assets2.lottiefiles.com/packages/lf20_i9mxcD.json"
+  style="width:400px; height: 400px;"
+>
+</lottie-player>
+</head>
+<body>
+<lottie-player
+  id="firstLottie"
+  src="https://raw.githubusercontent.com/AleKahpwn/NotionEmbeds/main/Comp 1.json"
+  style="width:300px; height: 100px;"
+>
+</lottie-player>
+   LottieInteractivity.create({
+  mode: 'scroll',
+  player: '#firstLottie',
+  actions: [
+    {
+      visibility: [0, 1],
+      type: 'seek',
+      frames: [0, 100],
+    },
+  ],
+});
+<!--<lottie-player src="https://raw.githubusercontent.com/AleKahpwn/NotionEmbeds/main/Comp 1.json" -->
+ <!-- background="transparent"  speed="1"  style="width: 300px; height: 300px;" click></lottie-player>-->
+
+</body>
+</html>
